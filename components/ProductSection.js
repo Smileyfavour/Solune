@@ -42,7 +42,7 @@ export default function ProductSection() {
           </h2>
         </div>
 
-        <a href="#products" className="products-link">
+        <a href="/shop" className="products-link">
           SHOP OUR FAVORITES ↗
         </a>
       </div>
