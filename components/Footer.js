@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="footer-column">
           <h3>ABOUT</h3>
           <a href="#">Our Story</a>
-          <a href="#">The Ritual</a>
+          <a href="ritual">The Ritual</a>
           <a href="/journal">Journal</a>
           <a href="/contact">Contact</a>
         </div>
