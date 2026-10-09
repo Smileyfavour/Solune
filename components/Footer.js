@@ -21,8 +21,8 @@ export default function Footer() {
           <h3>ABOUT</h3>
           <a href="#">Our Story</a>
           <a href="#">The Ritual</a>
-          <a href="#">Journal</a>
-          <a href="#">Contact</a>
+          <a href="/journal">Journal</a>
+          <a href="/contact">Contact</a>
         </div>
 
         <div className="footer-column">
