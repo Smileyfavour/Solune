@@ -19,7 +19,7 @@ export default function Footer() {
 
         <div className="footer-column">
           <h3>ABOUT</h3>
-          <a href="#">Our Story</a>
+          <a href="/story">Our Story</a>
           <a href="ritual">The Ritual</a>
           <a href="/journal">Journal</a>
           <a href="/contact">Contact</a>
@@ -37,7 +37,7 @@ export default function Footer() {
         <span>© 2026 solune. All rights reserved.</span>
 
         <div>
-          <a href="#">Privacy</a>
+          <a href="/privacy">Privacy</a>
           <a href="#">Terms</a>
         </div>
       </div>

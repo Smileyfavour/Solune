@@ -1,0 +1,210 @@
+/* Solune Ritual page */
+.ritual-page {
+  background: #F7F5EE;
+  color: #2B3429;
+  overflow: hidden;
+}
+.ritual-page * { box-sizing: border-box; }
+.ritual-page img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ritual-page .ritual-eyebrow {
+  margin: 0 0 18px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  line-height: 1.5;
+}
+.ritual-page h1, .ritual-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+.ritual-page h1 span, .ritual-page h2 span { display: block; color: #B36952; font-style: italic; }
+.ritual-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 490px;
+  background: #E9E3D8;
+}
+.ritual-hero-copy {
+  align-self: center;
+  padding: 68px clamp(28px, 7.5vw, 110px);
+}
+.ritual-hero h1 { font-size: clamp(48px, 6vw, 78px); margin: 0 0 24px; }
+.ritual-hero-description {
+  max-width: 420px;
+  margin: 0 0 28px;
+  color: #69675D;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.ritual-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 7px;
+  border: 0;
+  border-bottom: 1px solid #93815B;
+  background: transparent;
+  color: #2B3429;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-decoration: none;
+}
+.ritual-hero-photo { position: relative; min-height: 490px; }
+.ritual-hero-photo img { position: absolute; inset: 0; }
+.ritual-photo-note {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  background: #F7F5EE;
+  padding: 10px 13px;
+  font-size: 8px;
+  letter-spacing: .15em;
+}
+.ritual-philosophy {
+  padding: 92px 7% 88px;
+  text-align: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.ritual-philosophy > h2, .ritual-section-heading h2, .ritual-evening-copy h2, .ritual-shop h2 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  margin: 0 0 18px;
+}
+.ritual-philosophy > p:not(.ritual-eyebrow) {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #77756D;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.ritual-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  text-align: left;
+  margin-top: 62px;
+}
+.ritual-values > div { border-top: 1px solid #DCD6C9; padding-top: 17px; }
+.ritual-values > div > span { color: #B36952; font-size: 11px; letter-spacing: .12em; }
+.ritual-values h3, .ritual-step-card h3, .ritual-evening-step h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 16px 0 9px;
+}
+.ritual-values p, .ritual-evening-step p {
+  color: #77756D;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
+}
+.ritual-morning { background: #ECE9DF; padding: 78px 6.5% 86px; }
+.ritual-section-heading { max-width: 660px; margin: 0 auto 42px; text-align: center; }
+.ritual-section-heading > p:last-child {
+  color: #77756D;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 480px;
+}
+.ritual-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.ritual-step-image { position: relative; aspect-ratio: .84 / 1; overflow: hidden; background: #DDD5C8; }
+.ritual-step-image img { transition: transform .6s ease; }
+.ritual-step-card:hover .ritual-step-image img { transform: scale(1.035); }
+.ritual-step-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: #F7F5EE;
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-size: 13px;
+}
+.ritual-step-label { margin: 20px 0 0; color: #8C7A57; font-size: 9px; letter-spacing: .16em; }
+.ritual-step-card h3 { font-size: clamp(20px, 2vw, 25px); margin: 10px 0; }
+.ritual-step-text { margin: 0; color: #77756D; font-size: 12px; line-height: 1.8; }
+.ritual-evening {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+.ritual-evening-image { min-height: 620px; background: #DED4C5; }
+.ritual-evening-copy { align-self: center; padding: 70px clamp(28px, 7vw, 100px); }
+.ritual-evening-copy h2 { margin-bottom: 20px; }
+.ritual-evening-intro { color: #77756D; font-size: 13px; line-height: 1.9; margin: 0 0 30px; max-width: 440px; }
+.ritual-evening-steps { margin-bottom: 30px; }
+.ritual-evening-step {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 13px;
+  padding: 17px 0;
+  border-top: 1px solid #E0DACE;
+}
+.ritual-evening-step > span { padding-top: 3px; color: #B36952; font-size: 10px; letter-spacing: .1em; }
+.ritual-evening-step h3 { margin: 0 0 6px; font-size: 21px; }
+.ritual-evening-step p { max-width: 390px; }
+.ritual-note {
+  text-align: center;
+  padding: 74px 22px 68px;
+  background: #F0EDE4;
+}
+.ritual-note-mark { display: block; color: #B36952; font-family: Georgia, serif; font-size: 62px; line-height: .7; }
+.ritual-note > p {
+  margin: 18px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 3.5vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+.ritual-note > p span { display: block; color: #B36952; font-style: italic; }
+.ritual-note-caption { color: #77756D; font-size: 9px; letter-spacing: .17em; }
+.ritual-shop { text-align: center; padding: 76px 22px 82px; }
+.ritual-shop h2 { margin-bottom: 16px; }
+.ritual-shop > p:not(.ritual-eyebrow) { margin: 0 0 26px; color: #77756D; font-size: 13px; }
+.ritual-shop-button {
+  display: inline-block;
+  padding: 15px 22px;
+  background: #2B3429;
+  color: #F7F5EE;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-decoration: none;
+  transition: background .25s ease;
+}
+.ritual-shop-button:hover { background: #485442; }
+@media (max-width: 850px) {
+  .ritual-hero { grid-template-columns: 1fr; }
+  .ritual-hero-copy { padding: 58px 7%; }
+  .ritual-hero-photo { min-height: 350px; }
+  .ritual-values { gap: 22px; }
+  .ritual-step-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 34px; }
+  .ritual-evening { grid-template-columns: 1fr; }
+  .ritual-evening-image { min-height: 400px; max-height: 520px; }
+  .ritual-evening-copy { padding: 60px 7%; }
+}
+@media (max-width: 540px) {
+  .ritual-hero h1 { font-size: 49px; }
+  .ritual-philosophy { padding: 62px 24px; }
+  .ritual-values { grid-template-columns: 1fr; gap: 24px; margin-top: 38px; }
+  .ritual-morning { padding: 58px 20px 64px; }
+  .ritual-step-grid { gap: 28px 14px; }
+  .ritual-step-image { aspect-ratio: .78 / 1; }
+  .ritual-step-card h3 { font-size: 20px; }
+  .ritual-step-text { font-size: 11px; }
+  .ritual-evening-image { min-height: 300px; }
+  .ritual-evening-copy { padding: 52px 24px; }
+  .ritual-note { padding: 60px 20px; }
+}

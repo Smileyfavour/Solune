@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/components/CartProvider";
+import "./shop.css"
 
 const products = [
   {

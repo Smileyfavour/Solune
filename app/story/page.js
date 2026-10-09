@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import "./story.css"
 
 export default function StoryPage() {
   return (
