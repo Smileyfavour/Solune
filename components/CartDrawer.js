@@ -1,8 +1,12 @@
+
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useCart } from "./CartProvider";
 
 export default function CartDrawer() {
+  const router = useRouter();
+
   const {
     cartItems,
     cartOpen,
@@ -15,6 +19,11 @@ export default function CartDrawer() {
 
   if (!cartOpen) return null;
 
+  const handleCheckout = () => {
+    setCartOpen(false);
+    router.push("/checkout");
+  };
+
   return (
     <>
       {/* Backdrop */}
@@ -25,7 +34,6 @@ export default function CartDrawer() {
 
       {/* Cart Drawer */}
       <aside className="cart-drawer">
-
         {/* Header */}
         <div className="cart-header">
           <h2>
@@ -59,24 +67,20 @@ export default function CartDrawer() {
                 className="cart-item"
                 key={item.name}
               >
-                {/* Product Image */}
                 <img
                   src={item.image}
                   alt={item.name}
                 />
 
-                {/* Product Details */}
                 <div className="cart-item-details">
                   <h3>{item.name}</h3>
 
                   <p>{item.size}</p>
 
-                  {/* Line Item Total */}
                   <strong>
-                    ${(item.price * item.quantity).toFixed(0)}
+                    ${(item.price * item.quantity).toFixed(2)}
                   </strong>
 
-                  {/* Quantity */}
                   <div className="quantity-selector">
                     <button
                       onClick={() =>
@@ -107,13 +111,11 @@ export default function CartDrawer() {
         {/* Footer */}
         {cartItems.length > 0 && (
           <div className="cart-footer">
-
-            {/* Subtotal */}
             <div className="cart-subtotal">
               <span>Subtotal</span>
 
               <strong>
-                ${subtotal.toFixed(0)}
+                ${subtotal.toFixed(2)}
               </strong>
             </div>
 
@@ -121,9 +123,16 @@ export default function CartDrawer() {
               Shipping calculated at checkout
             </p>
 
-            {/* Continue Shopping */}
             <button
               className="checkout-button"
+              onClick={handleCheckout}
+            >
+              PROCEED TO CHECKOUT
+              <span aria-hidden="true"> →</span>
+            </button>
+
+            <button
+              className="continue-shopping-button"
               onClick={() => setCartOpen(false)}
             >
               CONTINUE SHOPPING
